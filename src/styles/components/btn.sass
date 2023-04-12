@@ -1,0 +1,56 @@
+.btn
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  position: relative
+  line-height: 1 !important
+  white-space: nowrap
+  vertical-align: middle
+  user-select: none
+  text-decoration: none !important
+  box-sizing: border-box
+  max-width: 100% !important
+  transition-duration: .2s
+  border-radius: 3px
+  span
+    transition-duration: .2s
+    color: inherit
+  &:hover
+    cursor: pointer
+  &.disabled
+    pointer-events: none
+    opacity: .8
+  &-icon
+    width: 60px
+    height: 60px
+    border-radius: 50%
+    background-color: $white
+    box-shadow: $shadow-0
+    & > .icon
+      font-size: $text-22
+      transition-duration: .2s
+      color: $grey-2
+      &.icon-target
+        font-size: $text-26
+      &.icon-user
+        font-size: $text-24
+    &:hover,
+    &:focus,
+    &:active
+      & > .icon
+        color: $theme-1
+  &-big
+    height: 48px
+    padding: 0 45px
+    border-radius: 24px
+  &-theme
+    background-color: $theme-1
+    span,
+    .icon
+      color: $white
+    .icon
+      font-size: $text-20
+      margin-right: 12px
+    span
+      font-size: $text-15
+

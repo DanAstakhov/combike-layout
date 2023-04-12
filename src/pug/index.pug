@@ -1,0 +1,16 @@
+extends base/layouts/basic
+block vars
+  - var page = 'index'
+block title
+  title Combike | Navigation
+block content
+  .main
+    .navigation
+      h3 Combike layout navigation
+      ul
+        li: a(href='/map.html' target="_blank") Map & Search (The search is shown after clicking on the call button)
+        li: a(href='/popup-1.html' target="_blank") Popup rent bike
+        li: a(href='/popup-2.html' target="_blank") Popup code for rent
+        li: a(href='/popup-3.html' target="_blank") Popup add bike
+        li: a(href='/login.html' target="_blank") Login page
+        li: a(href='/admin-list.html' target="_blank") Admin bikes list

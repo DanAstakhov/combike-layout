@@ -1,0 +1,27 @@
+.navigation
+  padding: 30px
+  background-color: $white
+  height: 100vh
+  h3
+    font-size: $text-20
+    margin-bottom: 30px
+  ul
+    li
+      padding-left: 20px
+      position: relative
+      margin-bottom: 15px
+      &:before
+        content: ''
+        width: 6px
+        height: 6px
+        position: absolute
+        top: 7px
+        left: 0
+        background-color: $theme-1
+        border-radius: 50%
+      a
+        color: $grey-2
+        text-decoration: underline
+        &:hover
+          color: $theme-1
+          text-decoration: none

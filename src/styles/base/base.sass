@@ -1,0 +1,88 @@
+html
+  box-sizing: border-box
+  height: 100%
+  -ms-overflow-style: scrollbar
+
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+html,
+body
+  margin: 0
+  padding: 0
+  scroll-behavior: smooth
+  -webkit-overflow-scrolling: touch
+
+body
+  min-height: 100%
+  width: 100%
+  min-width: $min-window-width
+  font-family: $font-main
+  font-weight: $fw-regular
+  color: $dark-1
+  line-height: $default-line-height
+  font-size: $default-font-size
+  background-color: $dark-1
+  position: relative
+
+hr
+  border-top: 1px solid rgba(0, 0, 0, 0.1)
+
+img
+  max-width: 100%
+  height: auto
+
+button
+  background: none
+  border: none
+  padding: 0
+  outline: none
+
+fieldset
+  margin: 0
+  padding: 0
+  border: none
+
+[tabindex="-1"]:focus
+  outline: none !important
+
+.clearfix:before,
+.clearfix:after
+  content: ' '
+  display: table
+
+.clearfix:after
+  clear: both
+
+.select-dashed,
+.fix-opacity
+  opacity: 0
+
+.d-none
+  display: none
+
+.w-100
+  width: 100%
+
+.container
+  width: 100%
+  max-width: 100%
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+  +breakpoint(l)
+    padding-right: 20px
+    padding-left: 20px
+  +breakpoint(xl)
+    padding-right: 30px
+    padding-left: 30px
+
+.no-scroll
+  overflow: hidden
+
+#map
+  width: 100%
+  height: 100vh

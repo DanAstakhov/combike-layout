@@ -1,0 +1,103 @@
+.overlay
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($black, 0.4)
+  transition: all 0.5s ease-in-out
+  z-index: 99
+
+.modal 
+  background-color: $white
+  width: 80%
+  max-width: 500px
+  border-radius: 20px
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1)
+  transition: all 0.5s ease-in-out
+
+.modal-wrap
+  position: relative
+  padding: 35px 25px 25px
+  & > .modal-close
+    position: absolute
+    top: 20px
+    right: 20px
+    & > .icon
+      font-size: $text-18
+      color: $grey-1
+
+.modal-title
+  display: flex
+  flex-direction: column
+  align-items: center
+  &-icon
+    margin-bottom: 10px
+    .icon
+      color: $theme-1
+      font-size: $text-24
+      &.icon-bike-bicycle
+        font-size: $text-36
+  &-text
+    margin-bottom: 20px
+    text-align: center
+    span
+      color: $grey-2
+      font-size: $text-16
+
+.modal-slots
+  display: flex
+  margin-bottom: 25px
+  padding: 0 20px
+  &-item
+    flex: 0 1 auto
+    width: 50%
+    padding: 10px
+    text-align: center
+    &:first-child
+      border-right: $thin rgba($grey-1,.6)
+    &-count
+      line-height: 1
+      span
+        font-size: $text-40
+        font-weight: $fw-medium
+        color: $black
+    &-title
+      span
+        font-size: $text-14
+        color: $grey-2
+
+.modal-btn
+  text-align: center
+
+.modal-code
+  margin-bottom: 35px
+  text-align: center
+  span
+    font-size: $text-36
+    font-weight: $fw-medium
+    color: $black
+    letter-spacing: 12px
+
+.modal-timer
+  text-align: center
+  &-title
+    margin-bottom: 5px
+    span
+      color: $grey-2
+      font-size: $text-15
+  &-count
+    span
+      font-size: $text-22
+      font-weight: $fw-medium
+      color: $theme-1
+
+.modal-form
+  select
+    margin-bottom: 20px

@@ -1,0 +1,37 @@
+@mixin abs-center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+@mixin all-zero
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+@mixin txt-break()
+  overflow-wrap: break-word
+  word-wrap: break-word
+  word-break: keep-all
+  line-break: normal
+  hyphens: auto
+
+@mixin inlineBreak
+  content: '\A'
+  white-space: pre
+
+@mixin scroll
+  -webkit-overflow-scrolling: touch
+  overflow-scrolling: touch
+  scrollbar-color: $grey-1
+  scrollbar-width: thin
+  &::-webkit-scrollbar
+    -webkit-appearance: none
+    background-color: $grey-0
+    width: 6px
+    border-radius: 3px
+  &::-webkit-scrollbar-thumb
+    border-radius: 3px
+    background-color: $grey-1
+    -webkit-box-shadow: 0 0 1px rgba($grey-1,0.5)

@@ -1,0 +1,21 @@
+.main
+  position: relative
+  height: 100vh
+  max-width: 640px
+  margin: 0 auto
+
+.main-buttons
+  position: fixed
+  bottom: 40px
+  left: 0
+  right: 0
+  z-index: 9
+  display: flex
+  justify-content: center
+  gap: 0 60px
+  +breakpoint(sm)
+    gap: 0 80px
+
+
+.mapboxgl-control-container
+  opacity: 0

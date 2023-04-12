@@ -1,0 +1,39 @@
+-
+    var listData = [
+      {address: '5850 Bd des Grandes-Prairies, Saint-Léonard, QC H1P 1A2', distance: '576 m', bikes: '7', slots: '16'},
+      {address: '3350 Rue Beaubien E, Montréal, QC H1X 1G5', distance: '920 m', bikes: '2', slots: '22'},
+      {address: '1015 Rue du Marché Central, Montréal, QC H4N 3J8', distance: '1.6 km', bikes: '5', slots: '12'},
+      {address: '9300 Bd Saint-Michel, Montréal, QC H1Z 3H1', distance: '2.4 km', bikes: '1', slots: '24'},
+      {address: '5100 Chem. de la Côte St Luc, Montréal, QC H3W 2G9', distance: '4.32 km', bikes: '9', slots: '12'},
+      {address: '9191 Cavendish Blvd, Montreal, Quebec H4T 1M8', distance: '6.5 km', bikes: '7', slots: '12'},
+      {address: '1450 Saint-Catherine St W, Montreal, Quebec H3G 1R3', distance: '7.93 km', bikes: '9', slots: '14'},
+      {address: '5300 Rue St-Hubert, Montréal, QC H2J 2Y5', distance: '8.5 km', bikes: '7', slots: '16'},
+    ]
+
+mixin listItem(item)
+  .search-panel-list-item
+    .search-panel-list-item-info
+      span.ch-address= item.address
+      span.ch-distance= item.distance
+    .search-panel-list-item-count
+      span.ch-bikes= item.bikes
+      span.ch-slots= item.slots
+    button.search-panel-list-item-link(type='button')
+
+.search-panel#searchPanel
+  .search-panel-wrap
+    .search-panel-input
+      +input(
+        '_label',
+        '_labelClass',
+        'text',
+        '_inputClass',
+        'Find a station...',
+        '_description'
+      )
+      button#btnHideSearch.btn.search-panel-close(type='button'): i.icon.icon-close
+    .search-panel-list
+      for item in listData
+        +listItem(item)
+      for item in listData
+        +listItem(item)

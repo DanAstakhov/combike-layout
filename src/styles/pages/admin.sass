@@ -1,0 +1,40 @@
+.admin
+  background-color: $white
+  padding: 25px
+
+.admin-bikes
+  overflow-y: auto
+  padding: 0 10px 70px 0
+  +scroll
+  &-item
+    position: relative
+    padding: 20px 0
+    border-bottom: $thin rgba($grey-1,.5)
+    display: flex
+    justify-content: space-between
+    &-info
+      flex: 0 1 auto
+      width: calc(100% - 100px)
+      padding-right: 10px
+      .ch-sku
+        display: block
+        color: $theme-1
+        font-weight: $fw-medium
+        font-size: $text-15
+        margin-bottom: 5px
+      .ch-address
+        color: $grey-2
+        font-size: $text-15
+    &-status
+      flex: 0 1 auto
+      width: 100px
+      text-align: right
+
+.status-on-way
+  color: #009C41
+
+.status-waiting
+  color: #2980B9
+
+.status-alert
+  color: #E74C3C

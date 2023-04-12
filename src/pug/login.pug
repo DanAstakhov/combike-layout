@@ -1,0 +1,31 @@
+extends base/layouts/basic
+block vars
+  - var page = 'index'
+block title
+  title Combike | Login
+block content
+  .main
+    .login
+      .login-wrap
+        .login-title: span Login
+        .login-element
+          +input(
+            '_label',
+            '_labelClass',
+            'text',
+            '_inputClass',
+            'Enter your email',
+            '_description'
+          )
+        .login-element
+          +input(
+            '_label',
+            '_labelClass',
+            'password',
+            '_inputClass',
+            'Enter your password',
+            '_description'
+          )
+        button.btn.btn-big.btn-theme(type='button')
+          i.icon.icon-login-enter
+          span Login

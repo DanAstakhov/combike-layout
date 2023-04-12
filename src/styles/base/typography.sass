@@ -1,0 +1,75 @@
+html
+  font-size: $basis-font-size
+
+h1
+  font-size: $text-36
+
+h2
+  font-size: $text-30
+
+h3
+  font-size: $text-26
+
+h4
+  font-size: $text-20
+
+h5
+  font-size: $text-18
+
+h6
+  font-size: $text-14
+
+h1, h2, h3, h4, h5
+  color: $black
+  font-weight: $fw-medium
+  margin: 0 0 .5em
+  line-height: 1.4
+
+p
+  font-weight: $fw-regular
+  margin-top: 0
+  font-size: $text-16
+  color: $black
+
+b
+  font-weight: $fw-medium
+
+a
+  transition-duration: .2s
+  text-decoration: none
+  &:active,
+  &:hover
+    outline-width: 0
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover
+  text-decoration: none
+
+a:not([href]):not([tabindex]):focus
+  outline: 0
+
+[role="button"]
+  cursor: pointer
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea
+  -ms-touch-action: manipulation
+  touch-action: manipulation
+
+ol,
+ul,
+dl
+  list-style: none
+  margin: 0
+  padding: 0
+
+.ttu
+  text-transform: uppercase !important
+
+.text-center
+  text-align: center

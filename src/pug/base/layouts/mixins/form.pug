@@ -1,0 +1,56 @@
+//- FORMS
+
+mixin input(label, labelClass, inputType, inputClass, placeholder, description)
+  if (label !== '_label')
+    label.f-label(class= (labelClass === '_labelClass') ? '' : labelClass)= label
+  input(
+    type= inputType
+    value=''
+    name=''
+    class= ((inputClass === '_inputClass') ? '' : inputClass)
+    placeholder= ((placeholder === '_placeholder') ? '' : placeholder)
+  )
+  if (description !== '_description')
+    .f-description: span= description
+
+//- +input(
+      '_label',
+      '_labelClass',
+      '_inputType',
+      '_inputClass',
+      '_placeholder',
+      '_description'
+      )
+
+mixin textarea(label, placeholder, inputClass, rowsNum)
+  if (label !== '_label')
+    label.f-label= label
+  textarea(
+    placeholder= ((placeholder === '_placeholder') ? '' : placeholder)
+    rows= ((rowsNum === '_rowsNum') ? '' : rowsNum)
+    class= ((inputClass === '_inputClass') ? '' : inputClass)
+    )
+
+//- +textarea(
+      '_label',
+      '_placeholder',
+      '_inputClass',
+      '_rowsNum'
+      )
+
+mixin radio(classWrap, label, name)
+  label(class= (classWrap === '_classWrap') ? '' : classWrap)
+    input(type='radio' name= (name=== '_name') ? '' : name)
+    span: span= label
+
+//- +radio('_classWrap','_label','_name')
+
+mixin checkbox(classWrap, label)
+  label(class= (classWrap === '_classWrap') ? '' : classWrap)
+    input(type='checkbox' name='')
+    span: span= label
+
+//- +checkbox('_classWrap','_label')
+
+
+

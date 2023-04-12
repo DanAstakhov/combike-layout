@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Combike | Map</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/main.css?v=0">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main">
+      <div id="map"></div>
+      <div class="main-buttons">
+        <button class="btn btn-icon" type="button"><i class="icon icon-target"></i></button>
+        <button class="btn btn-icon" id="btnShowSearch" type="button"><i class="icon icon-search"></i></button>
+        <button class="btn btn-icon" type="button"><i class="icon icon-user"></i></button>
+      </div>
+      <div class="search-panel" id="searchPanel">
+        <div class="search-panel-wrap">
+          <div class="search-panel-input">
+              <input type="text" value="" name="" placeholder="Find a station...">
+            <button class="btn search-panel-close" id="btnHideSearch" type="button"><i class="icon icon-close"></i></button>
+          </div>
+          <div class="search-panel-list">
+                  <div class="search-panel-list-item">
+                    <div class="search-panel-list-item-info"><span class="ch-address">5850 Bd des Grandes-Prairies, Saint-Léonard, QC H1P 1A2</span><span class="ch-distance">576 m</span></div>
+                    <div class="search-panel-list-item-count"><span class="ch-bikes">7</span><span class="ch-slots">16</span></div>
+                    <button class="search-panel-list-item-link" type="button"></button>
+                  </div>
+                  <div class="search-panel-list-item">
+                    <div class="search-panel-list-item-info"><span class="ch-address">3350 Rue Beaubien E, Montréal, QC H1X 1G5</span><span class="ch-distance">920 m</span></div>
+                    <div class="search-panel-list-item-count"><span class="ch-bikes">2</span><span class="ch-slots">22</span></div>
+                    <button class="search-panel-list-item-link" type="button"></button>
+                  </div>
+                  <div class="search-panel-list-item">
+                    <div class="search-panel-list-item-info"><span class="ch-address">1015 Rue du Marché Central, Montréal, QC H4N 3J8</span><span class="ch-distance">1.6 km</span></div>
+                    <div class="search-panel-list-item-count"><span class="ch-bikes">5</span><span class="ch-slots">12</span></div>
+                    <button class="search-panel-list-item-link" type="button"></button>
+                  </div>
+                  <div class="search-panel-list-item">
+                    <div class="search-panel-list-item-info"><span class="ch-address">9300 Bd Saint-Michel, Montréal, QC H1Z 3H1</span><span class="ch-distance">2.4 km</span></div>
+                    <div class="search-panel-list-item-count"><span class="ch-bikes">1</span><span class="ch-slots">24</span></div>
+                    <button class="search-panel-list-item-link" type="button"></button>
+                  </div>
+                  <div class="search-panel-list-item">
+                    <div class="search-panel-list-item-info"><span class="ch-address">5100 Chem. de la Côte St Luc, Montréal, QC H3W 2G9</span><span class="ch-distance">4.32 km</span></div>
+                    <div class="search-panel-list-item-count"><span class="ch-bikes">9</span><span class="ch-slots">12</span></div>
+                    <button class="search-panel-list-item-link" type="button"></button>
+                  </div>
+                  <div class="search-panel-list-item">
+                    <div class="search-panel-list-item-info"><span class="ch-address">9191 Cavendish Blvd, Montreal, Quebec H4T 1M8</span><span class="ch-distance">6.5 km</span></div>
+                    <div class="search-panel-list-item-count"><span class="ch-bikes">7</span><span class="ch-slots">12</span></div>
+                    <button class="search-panel-list-item-link" type="button"></button>
+                  </div>
+                  <div class="search-panel-list-item">
+                    <div class="search-panel-list-item-info"><span class="ch-address">1450 Saint-Catherine St W, Montreal, Quebec H3G 1R3</span><span class="ch-distance">7.93 km</span></div>
+                    <div class="search-panel-list-item-count"><span class="ch-bikes">9</span><span class="ch-slots">14</span></div>
+                    <button class="search-panel-list-item-link" type="button"></button>
+                  </div>
+                  <div class="search-panel-list-item">
+                    <div class="search-panel-list-item-info"><span class="ch-address">5300 Rue St-Hubert, Montréal, QC H2J 2Y5</span><span class="ch-distance">8.5 km</span></div>
+                    <div class="search-panel-list-item-count"><span class="ch-bikes">7</span><span class="ch-slots">16</span></div>
+                    <button class="search-panel-list-item-link" type="button"></button>
+                  </div>
+                  <div class="search-panel-list-item">
+                    <div class="search-panel-list-item-info"><span class="ch-address">5850 Bd des Grandes-Prairies, Saint-Léonard, QC H1P 1A2</span><span class="ch-distance">576 m</span></div>
+                    <div class="search-panel-list-item-count"><span class="ch-bikes">7</span><span class="ch-slots">16</span></div>
+                    <button class="search-panel-list-item-link" type="button"></button>
+                  </div>
+                  <div class="search-panel-list-item">
+                    <div class="search-panel-list-item-info"><span class="ch-address">3350 Rue Beaubien E, Montréal, QC H1X 1G5</span><span class="ch-distance">920 m</span></div>
+                    <div class="search-panel-list-item-count"><span class="ch-bikes">2</span><span class="ch-slots">22</span></div>
+                    <button class="search-panel-list-item-link" type="button"></button>
+                  </div>
+                  <div class="search-panel-list-item">
+                    <div class="search-panel-list-item-info"><span class="ch-address">1015 Rue du Marché Central, Montréal, QC H4N 3J8</span><span class="ch-distance">1.6 km</span></div>
+                    <div class="search-panel-list-item-count"><span class="ch-bikes">5</span><span class="ch-slots">12</span></div>
+                    <button class="search-panel-list-item-link" type="button"></button>
+                  </div>
+                  <div class="search-panel-list-item">
+                    <div class="search-panel-list-item-info"><span class="ch-address">9300 Bd Saint-Michel, Montréal, QC H1Z 3H1</span><span class="ch-distance">2.4 km</span></div>
+                    <div class="search-panel-list-item-count"><span class="ch-bikes">1</span><span class="ch-slots">24</span></div>
+                    <button class="search-panel-list-item-link" type="button"></button>
+                  </div>
+                  <div class="search-panel-list-item">
+                    <div class="search-panel-list-item-info"><span class="ch-address">5100 Chem. de la Côte St Luc, Montréal, QC H3W 2G9</span><span class="ch-distance">4.32 km</span></div>
+                    <div class="search-panel-list-item-count"><span class="ch-bikes">9</span><span class="ch-slots">12</span></div>
+                    <button class="search-panel-list-item-link" type="button"></button>
+                  </div>
+                  <div class="search-panel-list-item">
+                    <div class="search-panel-list-item-info"><span class="ch-address">9191 Cavendish Blvd, Montreal, Quebec H4T 1M8</span><span class="ch-distance">6.5 km</span></div>
+                    <div class="search-panel-list-item-count"><span class="ch-bikes">7</span><span class="ch-slots">12</span></div>
+                    <button class="search-panel-list-item-link" type="button"></button>
+                  </div>
+                  <div class="search-panel-list-item">
+                    <div class="search-panel-list-item-info"><span class="ch-address">1450 Saint-Catherine St W, Montreal, Quebec H3G 1R3</span><span class="ch-distance">7.93 km</span></div>
+                    <div class="search-panel-list-item-count"><span class="ch-bikes">9</span><span class="ch-slots">14</span></div>
+                    <button class="search-panel-list-item-link" type="button"></button>
+                  </div>
+                  <div class="search-panel-list-item">
+                    <div class="search-panel-list-item-info"><span class="ch-address">5300 Rue St-Hubert, Montréal, QC H2J 2Y5</span><span class="ch-distance">8.5 km</span></div>
+                    <div class="search-panel-list-item-count"><span class="ch-bikes">7</span><span class="ch-slots">16</span></div>
+                    <button class="search-panel-list-item-link" type="button"></button>
+                  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js?v=0"></script>
+  </body>
+</html>

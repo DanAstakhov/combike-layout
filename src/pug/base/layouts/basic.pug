@@ -1,0 +1,14 @@
+doctype html
+html(lang="ru")
+  block vars
+  include mixins/all
+  include mixins/form
+  head
+    block title
+      title Default title
+    include base_components/head
+  body
+    include components/header
+    block content
+    include components/footer
+    include base_components/elements/scripts

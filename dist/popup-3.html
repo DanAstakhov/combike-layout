@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Combike | Map</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/main.css?v=0">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main">
+      <div class="overlay" id="modal-3">
+        <div class="modal">
+          <div class="modal-wrap">
+            <button class="modal-close" type="button"><i class="icon icon-close"></i></button>
+            <div class="modal-title">
+              <div class="modal-title-icon"><i class="icon icon-bike-bicycle"></i></div>
+              <div class="modal-title-text"><span>Add bike</span></div>
+            </div>
+            <div class="modal-form">
+              <select class="simple-select">
+                <option value="">Status</option>
+                <option value="">Available</option>
+                <option value="">Busy</option>
+                <option value="">Broken</option>
+              </select>
+              <select class="simple-select">
+                <option value="">Doc Station</option>
+                <option value="">#456-90</option>
+                <option value="">#456-91</option>
+                <option value="">#456-92</option>
+              </select>
+            </div>
+            <div class="modal-btn">
+              <button class="btn btn-big btn-theme" type="button"><span>Save</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js?v=0"></script>
+  </body>
+</html>

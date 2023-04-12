@@ -1,0 +1,35 @@
+-
+    var bikesList = [
+      {sku: '459-03', address: '5850 Bd des Grandes-Prairies, Saint-Léonard, QC H1P 1A2', statusClass: 'status-on-way', status: 'On the way'},
+      {sku: '459-04', address: '1015 Rue du Marché Central, Montréal, QC H4N 3J8', statusClass: 'status-waiting', status: 'Waiting'},
+      {sku: '459-05', address: '9300 Bd Saint-Michel, Montréal, QC H1Z 3H1', statusClass: 'status-on-way', status: 'On the way'},
+      {sku: '459-06', address: '5850 Bd des Grandes-Prairies, Saint-Léonard, QC H1P 1A2', statusClass: 'status-waiting', status: 'Waiting'},
+      {sku: '459-07', address: '9191 Cavendish Blvd, Montreal, Quebec H4T 1M8', statusClass: 'status-alert', status: 'Alert'},
+      {sku: '459-08', address: '1450 Saint-Catherine St W, Montreal, Quebec H3G 1R3', statusClass: 'status-on-way', status: 'On the way'},
+      {sku: '459-09', address: '1015 Rue du Marché Central, Montréal, QC H4N 3J8', statusClass: 'status-waiting', status: 'Waiting'},
+      {sku: '459-10', address: '9191 Cavendish Blvd, Montreal, Quebec H4T 1M8', statusClass: 'status-alert', status: 'Alert'},
+      {sku: '459-11', address: '5850 Bd des Grandes-Prairies, Saint-Léonard, QC H1P 1A2', statusClass: 'status-on-way', status: 'On the way'},
+      {sku: '459-12', address: '5850 Bd des Grandes-Prairies, Saint-Léonard, QC H1P 1A2', statusClass: 'status-waiting', status: 'Waiting'}
+    ]
+
+mixin bikeItem(item)
+  .admin-bikes-item
+    .admin-bikes-item-info
+      span.ch-sku= item.sku
+      span.ch-address= item.address
+    .admin-bikes-item-status
+      span(class= item.statusClass)= item.status
+
+.admin
+  .admin-search
+    +input(
+      '_label',
+      '_labelClass',
+      'text',
+      '_inputClass',
+      'Find bike...',
+      '_description'
+    )
+  .admin-bikes
+    for item in bikesList
+      +bikeItem(item)

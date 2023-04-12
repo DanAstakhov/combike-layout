@@ -1,0 +1,86 @@
+mixin titleOut(title)
+	.title-out
+		h2.title-out-item: span= title
+
+mixin titleDecor(title)
+	h2.title-decor: span= title
+
+mixin titleDecorSmall(title)
+	h2.title-decor.title-decor-small: span= title
+
+mixin titlePage(title)
+	.pagetitle
+		h1.pagetitle-item !{title}
+
+mixin titleProduct(title, subTitle)
+	.pagetitle.pagetitle-product
+		h1.pagetitle-item= title
+			if(subTitle !== '')
+				span= subTitle
+		a.pagetitle-print(href='javascript:window.print(); void 0;')
+
+mixin titleBrand(title, subTitle)
+	.pagetitle.pagetitle-product.pagetitle-brend
+		h1.pagetitle-item= title
+			if(subTitle !== '')
+				span= subTitle
+
+mixin btnMiddleArrow(typeButton, colorClass, title)
+	if(typeButton !== '')
+		button.btn.btn-medium.btn-icon-right(type= typeButton class= colorClass)
+			span= title
+			i.icon.icon-arrow-right
+	else
+		a.btn.btn-medium.btn-icon-right(href='#' class= colorClass)
+			span= title
+			i.icon.icon-arrow-right
+
+//- +btnMiddleArrow('typeButton', 'colorClass', 'title')
+
+mixin breadcrumbs
+	.breadcrumbs
+		ul
+			li: a(href='#') Главная
+			li: a(href='#') Оргтехника
+			li: a(href='#') Лазерные МФУ
+			li: span Konica Minolta bizhub C227
+
+//- +breadcrumbs('lastElement')
+
+mixin counter
+	.el-counter
+		button.ch-count-minus(type='button')
+		input.ch-count-input(
+			type="number"
+			name="quantity"
+			value="1"
+		)
+		button.ch-count-plus(type='button')
+
+mixin addMore(titles)
+	.add-more
+		a(href='#').link-dashed
+			span= titles
+
+//- +addMore('titles')
+
+mixin popupTitle(titles)
+	// top
+	.popup-scroll-title
+		span.ch-title= titles
+		button.btn.ch-close.js-popup-close(type='button'): i.icon.icon-close
+
+//- +popupTitle('titles')
+
+mixin borderLinkIcon(icon, title, color)
+	a.link-border-icon(href='#' class= color)
+		i.icon(class= icon)
+		span= title
+
+//- +borderLinkIcon('icon', 'title', 'color')
+
+mixin accHeader(title)
+	.account-header: span !{title}
+
+mixin accFooter(title)
+	.account-footer: a(href='#') !{title}
